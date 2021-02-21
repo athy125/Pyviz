@@ -2,7 +2,7 @@
 import random
 from string import Template
 from IPython.display import display, HTML
-import networkx as nx
+import networkx as
 
 '''
     PyNetViz(Python Network Vizualization for linkurious) as nvl
@@ -16,9 +16,10 @@ __author__ = "Atharva Joshi"
 __version__ = "0.1.0"
 __email__ = ""
 
+
 def node_info(G, node_name, alpha=0.6, r=0, g=0, b=204, x=0, y=0, size=1):
     """Allocate a attribute of each node.
-    
+
     Parameters
     ----------
     G: networkx.classes.graph.Graph
@@ -46,9 +47,10 @@ def node_info(G, node_name, alpha=0.6, r=0, g=0, b=204, x=0, y=0, size=1):
         y = random.random()
     G.node[node_name]['label'] = node_name
     G.node[node_name]['viz'] = {'color': {'a': alpha, 'r': r, 'g': g, 'b': b},
-        'position': {'x': x, 'y': y, 'z': 0.0},
-        'size': size}
+                                'position': {'x': x, 'y': y, 'z': 0.0},
+                                'size': size}
     return G
+
 
 def make_html(url='../src/iframe/pylinkurious.html', filename='./NetworkX_Graph.html'):
     html = """
@@ -105,6 +107,7 @@ def make_html(url='../src/iframe/pylinkurious.html', filename='./NetworkX_Graph.
     HTMLfile.write(s)
     HTMLfile.close()
 
+
 def make_gexf(G, layout=None, size=None, filename='./NetworkX_Graph.gexf'):
     if layout and size:
         for node in G.nodes():
@@ -120,9 +123,10 @@ def make_gexf(G, layout=None, size=None, filename='./NetworkX_Graph.gexf'):
             G = node_info(G, node)
     nx.write_gexf(G, filename)
 
+
 def view_html(filename='./NetworkX_Graph.html', height=500):
     """Display the html file.
-    
+
     Parameters
     ----------
     filename: string
@@ -137,6 +141,5 @@ def view_html(filename='./NetworkX_Graph.html', height=500):
     frameborder="0"
     webkitallowfullscreen mozallowfullscreen allowfullscreen>
     </iframe>"""
-    s = Template(html).safe_substitute(filename = filename, height = height)
+    s = Template(html).safe_substitute(filename=filename, height=height)
     display(HTML(s))
-
