@@ -2,7 +2,6 @@
 import random
 from string import Template
 from IPython.display import display, HTML
-import networkx as nx
 
 '''
     PyNetViz(Python Network Vizualization for sigmajs) as nvs
