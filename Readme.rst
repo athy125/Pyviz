@@ -1,11 +1,10 @@
-PyNetViz(Python Network Visualization)
+PyViz(Python Network Visualization)
 ========
 
 A python network(graph) visualization with networkx
 
 It works in IPython(Jupyter) 
 
-Demo : http://goo.gl/7U2IlV
 
 
 Installing
