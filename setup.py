@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import django
+import os
 from setuptools import setup
 
 
