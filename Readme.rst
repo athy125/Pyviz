@@ -7,6 +7,7 @@ It works in IPython(Jupyter)
 
 
 
+Installing
 ----------
 
 .. code-block:: python
