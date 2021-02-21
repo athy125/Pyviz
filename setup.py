@@ -16,7 +16,6 @@ setup(
     author_email='',
 
     keywords=['Network', 'Graph', 'Visualization'],
-    url="https://github.com/koorukuroo/pynetviz",
     packages=[
         'pynetviz',
     ],
